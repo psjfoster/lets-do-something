@@ -1,0 +1,19 @@
+{
+  "name": "lets-do-something",
+  "version": "0.0.1",
+  "description": "to dos for just me",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/psjfoster/lets-do-something.git"
+  },
+  "author": "pf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/psjfoster/lets-do-something/issues"
+  },
+  "homepage": "https://github.com/psjfoster/lets-do-something#readme"
+}
