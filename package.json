@@ -4,6 +4,7 @@
   "description": "to dos for just me",
   "main": "app.js",
   "scripts": {
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/psjfoster/lets-do-something/issues"
   },
-  "homepage": "https://github.com/psjfoster/lets-do-something#readme"
+  "homepage": "https://github.com/psjfoster/lets-do-something#readme",
+  "devDependencies": {
+    "electron": "^29.0.1"
+  }
 }
