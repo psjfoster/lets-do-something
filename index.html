@@ -2,17 +2,36 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
+    <title>Test app</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+    <base target=htmz>
 
-    <!-- renderer runs in normal web environment -->
-    <script src="./renderer.js"></script>
+    <!-- Clicking the 'edit' link replaces the static text
+         with an editable field component provided by /field -->
+    <label>
+      Title:
+      <div id="title">
+        <b>The Seven Bits</b>
+        <a href="/field?id=title&value=The Seven Bits#title">edit</a>
+      </div>
+    </label>
+    
+    <label>
+      Genre:
+      <div id="genre">
+        <b>Horror</b>
+        <a href="/field?id=genre&value=Horror#genre">edit</a>
+      </div>
+    </label>
+    
+    <label>
+      Description:
+      <div id="description">
+        <b>Seven ate nine.</b>
+        <a href="/field?id=description&value=Seven ate nine.#description">edit</a>
+      </div>
+    </label>
+    <iframe hidden name=htmz onload="setTimeout(()=>document.querySelector(contentWindow.location.hash||null)?.replaceWith(...contentDocument.body.childNodes))"></iframe>
   </body>
 </html>
